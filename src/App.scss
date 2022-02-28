@@ -18,66 +18,120 @@ header {
 .App {
   text-align: center;
   padding: 2rem 8rem;
-  h3 {
-    margin: 2rem auto;
-    color: white;
-    font-size: 1.5rem;
-  }
-  form {
-    input {
-      width: 60%;
-      height: 2rem;
-    }
-    select {
-      width: 20%;
-      height: 2rem;
-    }
-  }
-  .ListOfCountries {
+  .App-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    .Country {
-      border: solid 1px rgb(161, 161, 161);
-      border-radius: 10px;
+    flex-direction: column;
+    height: 80vh;
+    h3 {
+      margin: 2rem auto;
       color: white;
+      font-size: 1.5rem;
+    }
+    form {
+      input {
+        width: 60%;
+        height: 2rem;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 0 1rem;
+      }
+      select {
+        width: 20%;
+        height: 2rem;
+        padding: 0 1rem;
+      }
+      :last-child {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    }
+    .ListOfCountries {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      overflow: hidden;
+      overflow-y: scroll;
+      gap: 1rem;
+      .Country {
+        color: white;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        a {
+          text-decoration: none;
+          color: unset;
+          color: #9c86f9;
+        }
+      }
+      .alert {
+        width: 100%;
+        background-color: rebeccapurple;
+        font-size: 2rem;
+        color: white;
+      }
+    }
+    .card {
+      margin: 10px auto;
+      border-radius: 10px;
+      background-color: white;
+      max-width: 380px;
+      width: 100%;
+      overflow: hidden;
+      border: solid 1px #6f4ef6;
+      box-shadow: 0px 5px 45px rgb(0 0 0 / 10%);
+      .name {
+        font-weight: 800;
+        font-size: 2rem;
+        color: #282c34;
+        text-transform: uppercase;
+        padding: 2rem 1rem;
+      }
+      .information {
+        .title,
+        .data {
+          min-height: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .title {
+          background-color: #6f4ef6;
+          text-transform: capitalize;
+          color: white;
+          font-weight: 600;
+        }
+        .data {
+          background-color: white;
+          ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            gap: 1rem;
+            flex-wrap: wrap;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    .button {
+      display: block;
+      text-decoration: none;
+      width: 100%;
+      margin: 2rem auto;
+      border: none;
+      border-radius: 2rem;
+      height: 2rem;
+      background-color: rebeccapurple;
+      max-width: 380px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
       &:hover {
-        background-color: rgb(161, 161, 161);
-        color: #282c34;
+        max-width: 400px;
+        height: 2.5rem;
       }
-      a {
-        display: block;
-        padding: 1rem;
-        text-decoration: none;
-        color: unset;
-      }
-    }
-    .alert {
-      width: 100%;
-      background-color: rebeccapurple;
-      font-size: 2rem;
-      color: white;
-    }
-  }
-  .button {
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    margin: 2rem auto;
-    border: none;
-    border-radius: 2rem;
-    height: 2rem;
-    background-color: rebeccapurple;
-    max-width: 380px;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    &:hover {
-      max-width: 400px;
-      height: 2.5rem;
     }
   }
 }
@@ -120,45 +174,12 @@ header {
   }
 }
 
-.card {
-  margin: 10px auto;
-  border-radius: 10px;
-  background-color: white;
-  max-width: 380px;
-  overflow: hidden;
-  border: solid 1px #6f4ef6;
-  box-shadow: 0px 5px 45px rgb(0 0 0 / 10%);
-  .name {
-    font-weight: 800;
-    font-size: 2rem;
-    color: #282c34;
-    text-transform: uppercase;
-    padding: 2rem 1rem;
-  }
-  .information {
-    .title,
-    .data {
-      min-height: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .title {
-      background-color: #6f4ef6;
-      text-transform: capitalize;
-      color: white;
-      font-weight: 600;
-    }
-    .data {
-      background-color: white;
-      ul {
-        display: flex;
-        list-style-type: none;
-        padding: 0;
-        gap: 1rem;
-        flex-wrap: wrap;
-        flex-direction: column;
-      }
-    }
-  }
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #9c86f9;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
 }

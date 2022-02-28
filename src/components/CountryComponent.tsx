@@ -4,8 +4,10 @@ import { Country } from "../interface";
 export default function CountryComponent({ code, name }: Country) {
     return (
         <div className="Country">
+            <small>{code}</small>
+            <span>{name}</span>
             <Link to={`/country/${code}`} className="county-link">
-                {name}
+                See more
             </Link>
         </div>
     );
