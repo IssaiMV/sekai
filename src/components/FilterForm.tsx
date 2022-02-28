@@ -42,7 +42,6 @@ export default function FilterForm({ countries = [], continents = [], currencies
                 placeholder="Search a country here..."
                 onInput={handleChangeName}
                 type="text"
-                value={keyword}
             />
             <select name="continents" onChange={handleChangeContinent}>
                 <option value="">No continent</option>
