@@ -25,11 +25,11 @@ header {
   }
   form {
     input {
-      width: 75%;
+      width: 60%;
       height: 2rem;
     }
     select {
-      width: 25%;
+      width: 20%;
       height: 2rem;
     }
   }
@@ -47,6 +47,10 @@ header {
       &:hover {
         background-color: rgb(161, 161, 161);
         color: #282c34;
+      }
+      a {
+        text-decoration: none;
+        color: unset;
       }
     }
     .alert {

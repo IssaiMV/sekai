@@ -11,12 +11,9 @@ query {
     languages {
       code
     }
+    currency
   }
-  languages {
-    code
-    name
-	}
-	continents {
+  continents {
     code
     name
   }
