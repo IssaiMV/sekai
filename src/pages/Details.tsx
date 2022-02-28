@@ -3,7 +3,7 @@ import { Language } from "../interface/Languaje";
 import { useCountry } from "../hooks/custom-hooks";
 import { Link } from "wouter";
 
-export const Details = ({ params }: any) => {
+export const Details = ({ params }: { params: { code: string } }) => {
     const { data, error, loading } = useCountry(params.code);
 
     if (error) return <span style={{ color: 'red' }} > {error.stack}</span>

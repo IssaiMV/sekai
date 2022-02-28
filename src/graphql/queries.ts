@@ -8,9 +8,6 @@ query {
     continent {
       code
     }
-    languages {
-      code
-    }
     currency
   }
   continents {

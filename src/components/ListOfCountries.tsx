@@ -1,7 +1,7 @@
 import { Country } from "../interface/Country";
 import CountryComponent from "./CountryComponent";
 
-export default function ListOfCountries({ countries = [] }) {
+export default function ListOfCountries({ countries = [] }: { countries: Country[] }) {
     return (
         <div className="ListOfCountries">
             {
