@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { Continent } from "../interface/Continent";
-import { Country } from "../interface/Country";
+import { Continent, Country } from "../interface";
 import ListOptions from "./ListOptions";
 
 export default function FilterForm({ countries = [], continents = [], currencies = [], setList }: { countries: Country[], continents: Continent[], currencies: string[], setList: Function }) {

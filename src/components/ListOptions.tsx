@@ -1,4 +1,4 @@
-import { Option } from "../interface/Option";
+import { Option } from "../interface";
 
 export default function ListOptions({ options = [] }: { options: Option[] }) {
     return (

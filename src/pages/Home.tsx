@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import FilterForm from "../components/FilterForm";
 import ListOfCountries from "../components/ListOfCountries";
-import ListOptions from "../components/ListOptions";
 import Loading from "../components/Loading";
 import { useCountries } from "../hooks/custom-hooks";
-import { Country } from "../interface/Country";
+import { Country } from "../interface";
 
 
 export const Home = () => {

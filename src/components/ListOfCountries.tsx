@@ -1,4 +1,4 @@
-import { Country } from "../interface/Country";
+import { Country } from "../interface";
 import CountryComponent from "./CountryComponent";
 
 export default function ListOfCountries({ countries = [] }: { countries: Country[] }) {

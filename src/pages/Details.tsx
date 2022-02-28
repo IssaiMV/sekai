@@ -1,5 +1,5 @@
 import Loading from "../components/Loading";
-import { Language } from "../interface/Languaje";
+import { Language } from "../interface";
 import { useCountry } from "../hooks/custom-hooks";
 import { Link } from "wouter";
 
