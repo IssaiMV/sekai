@@ -39,7 +39,6 @@ header {
     gap: 20px;
 
     .Country {
-      padding: 10px 20px;
       border: solid 1px rgb(161, 161, 161);
       border-radius: 10px;
       color: white;
@@ -49,6 +48,8 @@ header {
         color: #282c34;
       }
       a {
+        display: block;
+        padding: 1rem;
         text-decoration: none;
         color: unset;
       }
@@ -58,6 +59,25 @@ header {
       background-color: rebeccapurple;
       font-size: 2rem;
       color: white;
+    }
+  }
+  .button {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    margin: 2rem auto;
+    border: none;
+    border-radius: 2rem;
+    height: 2rem;
+    background-color: rebeccapurple;
+    max-width: 380px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      max-width: 400px;
+      height: 2.5rem;
     }
   }
 }

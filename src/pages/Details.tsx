@@ -1,6 +1,7 @@
 import Loading from "../components/Loading";
 import { Language } from "../interface/Languaje";
 import { useCountry } from "../hooks/custom-hooks";
+import { Link } from "wouter";
 
 export const Details = ({ params }: any) => {
     const { data, error, loading } = useCountry(params.code);
@@ -51,6 +52,9 @@ export const Details = ({ params }: any) => {
                             </div>
                         </div>
                     </div>
+                    <Link to="/" className="button">
+                        Back
+                    </Link>
                 </>
             )}
         </>
