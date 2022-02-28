@@ -7,15 +7,14 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
-  gql,
   HttpLink
 } from "@apollo/client";
 
 
+console.log(process.env.REACT_APP_API_URL);
 const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://countries.trevorblades.com/',
+    uri: process.env.REACT_APP_API_URL,
   }),
   cache: new InMemoryCache()
 });
