@@ -7,7 +7,7 @@ export default function CountryComponent({ code, name }: Country) {
             <small>{code}</small>
             <span>{name}</span>
             <Link to={`/country/${code}`} className="county-link">
-                See more
+                See more ➡
             </Link>
         </div>
     );

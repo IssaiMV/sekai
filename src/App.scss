@@ -28,21 +28,30 @@ header {
       font-size: 1.5rem;
     }
     form {
-      input {
-        width: 60%;
-        height: 2rem;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
+      input,
+      select {
+        height: 2.5rem;
         padding: 0 1rem;
+        margin: 0 1rem;
+        border-radius: 10px;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 1.5rem;
+      }
+      input {
+        width: 50%;
+        &::placeholder {
+          color: #9c86f9;
+        }
       }
       select {
         width: 20%;
-        height: 2rem;
-        padding: 0 1rem;
-      }
-      :last-child {
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
+        option {
+          border: none;
+          background-color: #282c34;
+          color: #6f4ef6;
+        }
       }
     }
     .ListOfCountries {
@@ -66,7 +75,7 @@ header {
       }
       .alert {
         width: 100%;
-        background-color: rebeccapurple;
+        background-color: #6f4ef6;
         font-size: 2rem;
         color: white;
       }

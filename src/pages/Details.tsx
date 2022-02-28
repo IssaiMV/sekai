@@ -53,7 +53,7 @@ export const Details = ({ params }: { params: { code: string } }) => {
                         </div>
                     </div>
                     <Link to="/" className="button">
-                        Back
+                        ⬅ Back
                     </Link>
                 </>
             )}
